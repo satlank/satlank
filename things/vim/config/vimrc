@@ -1,0 +1,42 @@
+if v:progname == 'vi'
+	set noloadplugins
+endif
+
+let mapleader="\<Space>"
+let maplocalleader="\\"
+
+" Extension -> filetype mappings.
+let filetype_m='objc'
+let filetype_pl='prolog'
+
+if has('gui')
+  " Turn off scrollbars. (Default on macOS is "egmrL").
+  set guioptions-=L
+  set guioptions-=R
+  set guioptions-=b
+  set guioptions-=l
+  set guioptions-=r
+endif
+
+if &loadplugins
+	if has('packages')
+		packadd! base16-vim
+	endif
+endif
+
+" After this file is sourced, plugin code will be evaluated.
+" Automatic, language-dependent indentation, syntax coloring and other
+" functionality.
+"
+" Must come *after* the `:packadd!` calls above otherwise the contents of
+" package "ftdetect" directories won't be evaluated.
+filetype indent plugin on
+syntax on
+
+" See ~/.vim/after for files evaluated after that.
+" See `:scriptnames` for a list of all scripts, in evaluation order.
+" Launch Vim with `vim --startuptime vim.log` for profiling info.
+"
+" To see all leader mappings, including those from plugins:
+"
+"   vim -c 'set t_te=' -c 'set t_ti=' -c 'map <space>' -c q | sort
