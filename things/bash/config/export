@@ -1,0 +1,59 @@
+# vim: set syntax=sh:
+
+# Ensure we are using the correct locale
+export LANG=en_GB.UTF-8
+
+# Use local terminfo if exists
+if [ -d $HOME/.config/terminfo ]; then
+	export TERMINFO="$HOME/.config/terminfo"
+fi
+
+# Enable colours for things like 'ls' etc
+export CLICOLOR=1
+
+# Set the default editor; for difference between EDITOR and VISUAL see
+# https://unix.stackexchange.com/questions/4859/visual-vs-editor-whats-the-difference
+# I don't care about non-'advanced' terminals, so setting them to the
+# same works for me (though VISUAL should be enough) and 'does the right
+# thing' if something only looks at EDITOR.
+export EDITOR=vim
+export VISUAL=$EDITOR
+
+# History Settings
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export HISTCONTROL=ignoreboth:erasedups
+export HISTTIMEFORMAT="%F %T "
+export HISTIGNORE='ls:ll:bg:fg:history'
+
+# Ensure we get __git_ps1 to include change information
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+
+# Ensure GPG will work
+export GPG_TTY=`tty`
+
+# Ensure that there is no default kube config being used
+export KUBECONFIG=
+
+# Consistent location for go stuff
+export GOPATH=$HOME/Code/go
+
+# Update path
+if [ -d /opt/miniconda3 ]; then
+	# Location of anaconda on OSX (manual install)
+	export ANACONDA_PATH=/opt/miniconda3/bin
+elif [ -d /opt/anaconda ]; then
+	# Location of anaconda on Arch Linux (from AUR)
+	export ANACONDA_PATH=/opt/anaconda/bin
+fi
+if [ -d /usr/local/opt/openssl/bin ]; then
+	# openssl installation from homebrew
+	export PATH="/usr/local/opt/openssl/bin:$PATH"
+fi
+if [ -d ~/.cargo/bin ]; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi
+if [ -d ~/bin ]; then
+	export PATH=~/bin:$PATH
+fi

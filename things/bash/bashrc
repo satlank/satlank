@@ -1,0 +1,36 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# Helper function to source files if they exist
+function so {
+	[ -s $1 ] && source $1;
+}
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+	. /etc/bash_completion
+elif [ -f /usr/local/etc/bash_completion ] && ! shopt -oq posix; then
+	. /usr/local/etc/bash_completion
+else
+	if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+		. /usr/share/git/completion/git-prompt.sh
+	fi
+	if [ -f /usr/share/git/completion/git-completion.bash ]; then
+		. /usr/share/git/completion/git-completion.bash
+	fi
+fi
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+so ~/.config/bash/export
+so ~/.config/bash/shopt
+so ~/.config/bash/funcs
+so ~/.config/bash/prompt
+so ~/.config/bash/alias
