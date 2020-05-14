@@ -1,0 +1,24 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	stat = status
+	hist = log --oneline --graph
+
+[commit]
+	gpgSign = true
+
+[user]
+	name = Steffen R. Knollmann
+	email = srk@k7n.dev
+	signingKey = BA620F28A09A1737D3995B97BD0305724D4F10CD
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+[push]
+	default = upstream
