@@ -19,7 +19,7 @@ nnoremap <Leader>s? z=
 "   Add word to dictionary
 nnoremap <Leader>si zg
 "   Cycle through languages
-nnoremap <Leader>sl :call Sel_lang()<CR>
+nnoremap <Leader>sl :call satlank#spell#cycle()<CR>
 
 " Toggle list symbols on/off
 nnoremap <Leader>l :set list!<CR>

@@ -180,16 +180,6 @@ endif
 set wildmode=longest:full,full
 
 set spelllang=en_gb
-let spelllst = ["de", "en_gb"]
-let langcnt = 0
-
-function Sel_lang()
-	let g:langcnt = (g:langcnt+1) % len(g:spelllst)
-	let lang = g:spelllst[g:langcnt]
-	echo "language " .lang . " selected"
-	execute "set spelllang=" . lang
-endfunction
-
 
 set hlsearch   " Highlights the searches
 set incsearch  " Incremental searching
