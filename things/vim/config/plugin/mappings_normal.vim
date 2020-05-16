@@ -25,6 +25,3 @@ nnoremap <silent> <S-Right> :lnfile<CR>
 " Store relative line number jumps in the jumplist if they exceed a threshold.
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : '') . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : '') . 'j'
-
-" Clear search highlights
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
