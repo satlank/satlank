@@ -57,3 +57,7 @@ fi
 if [ -d ~/bin ]; then
 	export PATH=~/bin:$PATH
 fi
+
+# Set locations for base16 colours
+BASE16_DIR=~/.config/base16/scripts/
+BASE16_CONFIG=~/.config/base16/info
