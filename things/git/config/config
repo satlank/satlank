@@ -12,7 +12,7 @@
 [user]
 	name = Steffen R. Knollmann
 	email = srk@k7n.dev
-	signingKey = BA620F28A09A1737D3995B97BD0305724D4F10CD
+	signingKey = 0xAE12D7DABF364872
 
 [color]
 	branch = auto
