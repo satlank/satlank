@@ -166,7 +166,7 @@ if has('virtualedit')
 	set virtualedit=block            " allow cursor to move where there is no text in visual block mode
 endif
 set visualbell t_vb=                 " stop annoying bell
-set whichwrap=b,h,l,s,<,>,[,],~      " allow movements to cross line boundaries
+set whichwrap=b,s,<,>,[,],~      " allow movements to cross line boundaries
 set wildcharm=<C-z>                  " subsitute for 'wildchar' (<Tab>) in macros
 if has('wildignore')
 	set wildignore+=*.o,*.obj,build,build-*,.*.swp,.*.swo
