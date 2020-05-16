@@ -5,6 +5,7 @@ set backspace=indent,start,eol  " sane backspace behaviour
 
 set nobackup                    " don't write backups
 set nowritebackup               " don't write backups
+set noswapfile                  " don't write swap files
 
 set noemoji                     " don't assume all emoji are double width
 set noexpandtab                 " use real tabs by default (override behaviour per ft)
