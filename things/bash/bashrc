@@ -30,6 +30,7 @@ fi
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 so ~/.config/bash/export
+gpgconf --launch gpg-agent
 so ~/.config/bash/shopt
 so ~/.config/bash/colours
 # Apply base16 colour config if there is an existing config file

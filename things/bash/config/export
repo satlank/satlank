@@ -31,7 +31,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Ensure GPG will work
+export GNUPGHOME="$HOME/.config/gnupg"
 export GPG_TTY=`tty`
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # Ensure that there is no default kube config being used
 export KUBECONFIG=

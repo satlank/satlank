@@ -1,0 +1,8 @@
+Create symlinks to dotfile locations:
+
+```
+ln -s ${PWD}/config ~/.config/gnupg
+```
+
+Note: Permissions on `config` need to be restrictive, ie. `0700`, otherwise
+`gnupg` complains.
