@@ -18,9 +18,15 @@ if has('gui')
   set guioptions-=r
 endif
 
+" Improve responsiveness for async plugins, the default is 4000ms
+set updatetime=100
+
 if &loadplugins
 	if has('packages')
 		packadd! base16-vim
+
+		let g:signify_sign_show_count        = 0
+		packadd! vim-signify
 	endif
 endif
 
