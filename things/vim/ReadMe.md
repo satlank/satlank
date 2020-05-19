@@ -1,1 +1,7 @@
-Create a symlink from `$XDK_CONFIG_HOME/vim` to `config`.
+Create symlinks to dotfile locations:
+
+```
+ln -s ${PWD}/config ~/.config/vim
+ln -s ${PWD}/config ~/.config/nvim
+ln -s ~/.config/vim ~/.vim
+```
