@@ -21,6 +21,12 @@ endif
 " Improve responsiveness for async plugins, the default is 4000ms
 set updatetime=100
 
+" Allow local additions
+let s:vimrc_local=$HOME . '/.config/vim/vimrc.local'
+if filereadable(s:vimrc_local)
+	execute 'source ' . s:vimrc_local
+endif
+
 if &loadplugins
 	if has('packages')
 		packadd! base16-vim
