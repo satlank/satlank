@@ -22,7 +22,7 @@ endif
 set updatetime=100
 
 " Allow local additions
-let s:vimrc_local=$HOME . '/.config/vim/vimrc.local'
+let s:vimrc_local=$XDG_CONFIG_DIR . '/vim/vimrc.local'
 if filereadable(s:vimrc_local)
 	execute 'source ' . s:vimrc_local
 endif

@@ -29,14 +29,36 @@ fi
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-so ~/.config/bash/export
+# Explicitly set XDG variables
+if [ -z ${XDG_CONFIG_HOME+x} ]; then
+	export XDG_CONFIG_HOME=$HOME/.config
+fi
+if [ -z ${XDG_CACHE_HOME+x} ]; then
+	export XDG_CACHE_HOME=$HOME/.cache
+fi
+if [ -z ${XDG_DATA_HOME+x} ]; then
+	export XDG_DATA_HOME=$HOME/.local/share
+fi
+if [ -z ${XDG_RUNTIME_DIR+x} ]; then
+	if [ x$(uname) == 'xDarwin' ]; then
+		export XDG_RUNTIME_DIR=$TMPDIR
+	else
+		# TODO: What to do on not-Darwin? XDG_RUNTIME_DIR has special
+		#       requirements that are difficult to fulfill (e.g. only lasting
+		#       from first login to last logout).  But then systemd should be
+		#       setting a suitable value.
+		:
+	fi
+fi
+
+so ${XDG_CONFIG_HOME}/bash/export
 gpgconf --launch gpg-agent
-so ~/.config/bash/shopt
-so ~/.config/bash/colours
+so ${XDG_CONFIG_HOME}/bash/shopt
+so ${XDG_CONFIG_HOME}/bash/colours
 # Apply base16 colour config if there is an existing config file
 if [ -f "$BASE16_CONFIG" ]; then
 	colour
 fi
-so ~/.config/bash/funcs
-so ~/.config/bash/prompt
-so ~/.config/bash/alias
+so ${XDG_CONFIG_HOME}/bash/funcs
+so ${XDG_CONFIG_HOME}/bash/prompt
+so ${XDG_CONFIG_HOME}/bash/alias

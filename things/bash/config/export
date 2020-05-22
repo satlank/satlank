@@ -4,8 +4,8 @@
 export LANG=en_GB.UTF-8
 
 # Use local terminfo if exists
-if [ -d $HOME/.config/terminfo ]; then
-	export TERMINFO="$HOME/.config/terminfo"
+if [ -d ${XDG_CONFG_HOME}/terminfo ]; then
+	export TERMINFO="${XDG_CONFIG_HOME}/terminfo"
 fi
 
 # Enable colours for things like 'ls' etc
@@ -31,7 +31,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Ensure GPG will work
-export GNUPGHOME="$HOME/.config/gnupg"
+export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
 export GPG_TTY=`tty`
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
@@ -61,5 +61,5 @@ if [ -d ~/bin ]; then
 fi
 
 # Set locations for base16 colours
-BASE16_DIR=~/.config/base16/scripts/
-BASE16_CONFIG=~/.config/base16/info
+BASE16_DIR=${XDG_CONFIG_HOME}/base16/scripts/
+BASE16_CONFIG=${XDG_CONFIG_HOME}/base16/info

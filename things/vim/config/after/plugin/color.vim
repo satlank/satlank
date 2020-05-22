@@ -3,7 +3,7 @@ function s:CheckColorScheme()
 		let g:base16colorspace=256
 	endif
 
-	let s:config_file = expand('~/.config/base16/info')
+	let s:config_file = $XDG_CONFIG_HOME . '/base16/info'
 
 	if filereadable(s:config_file)
 		let s:config = readfile(s:config_file, '', 2)
@@ -14,7 +14,7 @@ function s:CheckColorScheme()
 			echoerr 'Bad background ' . s:config[1] . ' in ' . s:config_file
 		endif
 
-		if filereadable(expand('~/.config/vim/pack/external/opt/base16-vim/colors/base16-' . s:config[0] . '.vim'))
+		if filereadable($XDG_CONFIG_HOME . '/vim/pack/external/opt/base16-vim/colors/base16-' . s:config[0] . '.vim')
 			execute 'colorscheme base16-' . s:config[0]
 		else
 			echoerr 'Bad scheme ' . s:config[0] . ' in ' . s:config_file

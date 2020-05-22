@@ -1,7 +1,7 @@
 Create symlinks to dotfile locations:
 
 ```
-ln -s ${PWD}/config ~/.config/gnupg
+ln -s ${PWD}/config ${XDG_CONFIG_HOME}/gnupg
 ```
 
 Note: Permissions on `config` need to be restrictive, ie. `0700`, otherwise
