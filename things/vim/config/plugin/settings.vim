@@ -3,9 +3,12 @@ scriptencoding utf-8
 set autoindent                  " maintain indent of current line
 set backspace=indent,start,eol  " sane backspace behaviour
 
-set nobackup                    " don't write backups
-set nowritebackup               " don't write backups
-set noswapfile                  " don't write swap files
+set backup                                " delete old backup
+set writebackup                           " backup current file
+set backupdir=$XDG_DATA_HOME/vim/backup   " set directory for backup files
+
+set swapfile                            " enable swap files
+set directory=$XDG_DATA_HOME/vim/swap   " set directory for swap files
 
 set noemoji                     " don't assume all emoji are double width
 set noexpandtab                 " use real tabs by default (override behaviour per ft)
@@ -115,9 +118,8 @@ if has('persistent_undo')
 	if exists('$SUDO_USER')
 		set noundofile        " don't create root owned files
 	else
-		set undodir=~/.vim/tmp/undo   " keep undo files out of the way
-		set undodir+=.
-		set noundofile                " do not use undo files
+		set undodir=$XDG_DATA_HOME/vim/undo   " keep undo files out of the way
+		set undofile                " do not use undo files
 	endif
 endif
 
@@ -142,25 +144,25 @@ if exists('s:viminfo')
 		" - s10 max item size 10KB
 		" - h do not save/restore 'hlsearch' setting
 		"
-		" Our overrides:
+		" Our overrides (keep h):
 		" - '0 store marks for 0 files
 		" - <0 don't save registers
 		" - f0 don't store file marks
-		" - n: store in ~/.vim/tmp
+		" - n: store in $XDG_DATA_HOME/vim/
 		"
-		execute 'set ' . s:viminfo . "='0,<0,f0,n~/.vim/tmp/" . s:viminfo
+		execute 'set ' . s:viminfo . "='0,<0,f0,h,n$XDG_DATA_HOME/vim/" . s:viminfo
 
-		if !empty(glob('~/.vim/tmp/' . s:viminfo))
-			if !filereadable(expand('~/.vim/tmp/' . s:viminfo))
-				echoerr 'warning: ~/.vim/tmp/' . s:viminfo . ' exists but is not readable'
+		if !empty(glob('$XDG_DATA_HOME/vim/' . s:viminfo))
+			if !filereadable(expand('$XDG_DATA_HOME/vim/' . s:viminfo))
+				echoerr 'warning: $XDG_DATA_HOME/vim/' . s:viminfo . ' exists but is not readable'
 			endif
 		endif
 	endif
 endif
 
 if has('mksession')
-	set viewdir=~/.vim/tmp/view      "override ~/.vim/view default
-	set viewoptions=cursor,folds     " save/restore just these
+	set viewdir=$XDG_DATA_HOME/vim/view      "override ~/.vim/view default
+	set viewoptions=cursor,folds             " save/restore just these
 endif
 
 if has('virtualedit')
