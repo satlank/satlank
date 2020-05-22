@@ -9,6 +9,12 @@
 [commit]
 	gpgSign = true
 
+[core]
+	pager = delta --theme='base16'
+
+[interactive]
+	diffFilter = delta --color-only
+
 [user]
 	name = Steffen R. Knollmann
 	email = srk@k7n.dev
