@@ -1,0 +1,27 @@
+= Configurations
+
+This is collection of my dotfiles as they have accumulated and evolved over the
+decades with heavy inspiration by other kind souls.
+
+== History
+
+=== May 2020
+
+First incarnation of this repository, combining several previous locations and
+taking lots of inspiration (and settings) from
+https://github.com/wincent/wincent[wincent].
+
+=== 2014-2020
+
+Heavy use of https://github.com/RichiH/vcsh[vcsh] to structure dotfiles and
+various attempts at improving vim and bash configurations.
+
+=== 2003-2014
+
+Some experimentation with tracking configuration in `svn`, but mostly just
+living dotfiles that survived the odd hardware changes by being copied over
+in time; also manually copying around changes via `scp`.
+
+=== Pre-2003
+
+Let's not go there.
