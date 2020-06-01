@@ -11,3 +11,17 @@ Create directories for temp/backup/etc files:
 ----
 mkdir -p "$XDG_DATA_HOME"/vim/{undo,swap,backup}
 ----
+
+
+== Deoplete/Language Server Completions
+
+To use `deoplete` the neovim python package needs to be available, e.g. `pip3
+install neovim` or `conda install pynvim`.
+
+For the language servers we need
+
+Python:: `pyls` (`conda install python-language-server[all]` - drop the
+`[all]` for a basic installation)
+Rust:: link:https://rust-analyzer.github.io/[Rust Analyzer] - simply get it from
+https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary[the
+download page]

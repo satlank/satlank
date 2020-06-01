@@ -7,3 +7,15 @@
 [submodule "things/vim/config/pack/external/opt/vim-signify"]
 	path = things/vim/config/pack/external/opt/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule "things/vim/config/pack/external/opt/rust.vim"]
+	path = things/vim/config/pack/external/opt/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "things/vim/config/pack/external/opt/deoplete-lsp"]
+	path = things/vim/config/pack/external/opt/deoplete-lsp
+	url = https://github.com/Shougo/deoplete-lsp.git
+[submodule "things/vim/config/pack/external/opt/nvim-lsp"]
+	path = things/vim/config/pack/external/opt/nvim-lsp
+	url = https://github.com/neovim/nvim-lsp.git
+[submodule "things/vim/config/pack/external/opt/deoplete.nvim"]
+	path = things/vim/config/pack/external/opt/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git

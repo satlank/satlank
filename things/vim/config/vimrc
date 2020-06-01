@@ -31,8 +31,18 @@ if &loadplugins
 	if has('packages')
 		packadd! base16-vim
 
+		packadd! deoplete-lsp
+		packadd! rust.vim
+
+		if has('nvim')
+			packadd! nvim-lsp
+			lua require'nvim_lsp'.pyls.setup{}
+			lua require'nvim_lsp'.rust_analyzer.setup({})
+		endif
+
 		let g:signify_sign_show_count        = 0
 		packadd! vim-signify
+
 	endif
 endif
 
