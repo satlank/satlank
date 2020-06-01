@@ -1,5 +1,5 @@
 if has('autocmd')
-	augroup satlankIdelboot
+	augroup satlankIdleBoot
 		if has('vim_starting')
 			autocmd CursorHold,CursorHoldI * call satlank#autocmds#idleboot()
 		endif
