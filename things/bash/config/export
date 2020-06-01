@@ -16,7 +16,7 @@ export CLICOLOR=1
 # I don't care about non-'advanced' terminals, so setting them to the
 # same works for me (though VISUAL should be enough) and 'does the right
 # thing' if something only looks at EDITOR.
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL=$EDITOR
 
 # History Settings
