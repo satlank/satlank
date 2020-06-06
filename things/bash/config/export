@@ -41,6 +41,10 @@ export KUBECONFIG=
 # Consistent location for go stuff
 export GOPATH=$HOME/Code/go
 
+# Deal with rust/cargo
+export CARGO_HOME=${XDG_CACHE_HOME}/cargo
+export RUSTUP_HOME=${XDG_CACHE_HOME}/rustup
+
 # Update path
 if [ -d /opt/miniconda3 ]; then
 	# Location of anaconda on OSX (manual install)
@@ -53,8 +57,8 @@ if [ -d /usr/local/opt/openssl/bin ]; then
 	# openssl installation from homebrew
 	export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
-if [ -d ~/.cargo/bin ]; then
-	export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d ${CARGO_HOME}/bin ]; then
+	export PATH="$CARGO_HOME/bin:$PATH"
 fi
 if [ -d ~/bin ]; then
 	export PATH=~/bin:$PATH
