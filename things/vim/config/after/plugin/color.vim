@@ -23,10 +23,6 @@ function s:CheckColorScheme()
 		set background=dark
 		colorscheme base16-synth-midnight-dark
 	endif
-	" Ensure there is no background colour set for normal text - this is to
-	" allow transparency to work
-	highlight! Normal ctermbg=NONE guibg=NONE
-	highlight! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 endfunction
 
 if v:progname !=# 'vi'
