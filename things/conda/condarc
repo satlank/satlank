@@ -1,0 +1,13 @@
+# vim: set ft=yaml:
+channel_priority: strict
+ssl_verify: true
+channels:
+  - defaults
+  - conda-forge
+create_default_packages:
+  - neovim
+  - python-language-server[all]
+
+auto_update_conda: false
+changeps1: false
+report_errors: false

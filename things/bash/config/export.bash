@@ -43,7 +43,7 @@ export GOPATH=$HOME/Code/go
 export CARGO_HOME=${XDG_CACHE_HOME}/cargo
 export RUSTUP_HOME=${XDG_CACHE_HOME}/rustup
 
-# Update path
+# Deal with (ana)conda
 if [ -d /opt/miniconda3 ]; then
 	# Location of anaconda on OSX (manual install)
 	export ANACONDA_PATH=/opt/miniconda3/bin
@@ -51,7 +51,12 @@ elif [ -d /opt/anaconda ]; then
 	# Location of anaconda on Arch Linux (from AUR)
 	export ANACONDA_PATH=/opt/anaconda/bin
 fi
+if [ ! -z ${ANACONDA_PATH+x} ]; then
+	export CONDA_PKGS_DIRS=${XDG_CACHE_HOME}/conda/pkgs
+	export CONDA_ENVS_PATH=${XDG_DATA_HOME}/conda/envs
+fi
 
+# Update path
 if [ -d /usr/local/opt/openssl/bin ]; then
 	# openssl installation from homebrew
 	export PATH="/usr/local/opt/openssl/bin:$PATH"
