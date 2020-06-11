@@ -1,5 +1,3 @@
-# vim: set syntax=sh:
-
 # Ensure we are using the correct locale
 export LANG=en_GB.UTF-8
 
@@ -53,6 +51,7 @@ elif [ -d /opt/anaconda ]; then
 	# Location of anaconda on Arch Linux (from AUR)
 	export ANACONDA_PATH=/opt/anaconda/bin
 fi
+
 if [ -d /usr/local/opt/openssl/bin ]; then
 	# openssl installation from homebrew
 	export PATH="/usr/local/opt/openssl/bin:$PATH"

@@ -1,5 +1,3 @@
-# vim: set syntax=sh:
-
 shopt -s histappend  # Append to histfile on exist instead of replace
 shopt -s cmdhist  # Save multi-line commands as single line in history
 shopt -s checkwinsize  # Update window size (col/rows) after commands

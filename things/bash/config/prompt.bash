@@ -1,5 +1,3 @@
-# vim: set syntax=sh:
-
 export PROMPT_COMMAND=__prompt_command
 
 # Kube PS1 magic from

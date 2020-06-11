@@ -1,5 +1,3 @@
-# vim: set syntax=sh :
-
 # Takes a hex colour in the form of "RRGGBB" and outputs its luma (0-255, where
 # 0 is black and 255 is white).
 #

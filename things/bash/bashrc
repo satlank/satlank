@@ -51,14 +51,14 @@ if [ -z ${XDG_RUNTIME_DIR+x} ]; then
 	fi
 fi
 
-so ${XDG_CONFIG_HOME}/bash/export
+so ${XDG_CONFIG_HOME}/bash/export.bash
 gpgconf --launch gpg-agent
-so ${XDG_CONFIG_HOME}/bash/shopt
-so ${XDG_CONFIG_HOME}/bash/colours
+so ${XDG_CONFIG_HOME}/bash/shopt.bash
+so ${XDG_CONFIG_HOME}/bash/colours.bash
 # Apply base16 colour config if there is an existing config file
 if [ -f "$BASE16_CONFIG" ]; then
 	colour
 fi
-so ${XDG_CONFIG_HOME}/bash/funcs
-so ${XDG_CONFIG_HOME}/bash/prompt
-so ${XDG_CONFIG_HOME}/bash/alias
+so ${XDG_CONFIG_HOME}/bash/funcs.bash
+so ${XDG_CONFIG_HOME}/bash/prompt.bash
+so ${XDG_CONFIG_HOME}/bash/alias.bash

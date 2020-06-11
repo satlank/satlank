@@ -1,5 +1,3 @@
-# vim: set syntax=sh :
-
 function _kon_usage {
 	local files
 	files=$(find ${HOME}/.kube/envs/ -type f -maxdepth 1 -exec basename {} \;)
