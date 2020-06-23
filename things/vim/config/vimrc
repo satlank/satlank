@@ -27,6 +27,10 @@ if filereadable(s:vimrc_local)
 	execute 'source ' . s:vimrc_local
 endif
 
+" put netrwhist into XDG directory instead of the first directory in the runtime
+" path
+let g:netrw_home=$XDG_DATA_HOME . '/vim'
+
 if &loadplugins
 	if has('packages')
 		packadd! base16-vim
