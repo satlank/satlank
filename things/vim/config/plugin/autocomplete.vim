@@ -1,3 +1,5 @@
+call satlank#autocomplete#setup_mappings()
+
 if has('nvim')
 	packadd deoplete.nvim
 	call satlank#defer#defer('call satlank#autocomplete#deoplete_init()')
