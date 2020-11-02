@@ -37,6 +37,7 @@ if &loadplugins
 
 		packadd! deoplete-lsp
 		packadd! rust.vim
+		packadd! dart-vim-plugin
 
 		if has('nvim')
 			packadd! nvim-lsp

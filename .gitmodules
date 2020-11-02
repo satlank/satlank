@@ -19,3 +19,6 @@
 [submodule "things/vim/config/pack/external/opt/deoplete.nvim"]
 	path = things/vim/config/pack/external/opt/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "things/vim/config/pack/external/opt/dart-vim-plugin"]
+	path = things/vim/config/pack/external/opt/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin
