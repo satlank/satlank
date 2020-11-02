@@ -5,7 +5,7 @@ channels:
   - defaults
   - conda-forge
 create_default_packages:
-  - neovim
+  - pynvim
   - python-language-server[all]
 
 auto_update_conda: false
