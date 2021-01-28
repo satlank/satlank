@@ -71,3 +71,6 @@ fi
 # Set locations for base16 colours
 BASE16_DIR=${XDG_CONFIG_HOME}/base16/scripts/
 BASE16_CONFIG=${XDG_CONFIG_HOME}/base16/info
+
+# Make Starship use an XDG directory
+export STARSHIP_CONFIG=${XDG_CONFIG_HOME}/starship/starship.toml

@@ -1,0 +1,84 @@
+# Don't print a new line a t the start of the prompt
+add_newline = false
+format = """# $username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$kubernetes\
+$rust\
+$conda\
+$aws\
+$cmd_duration\
+$status\
+$line_break\
+``
+"""
+
+[username]
+disabled = false
+show_always = true
+format = "$user@"
+
+[hostname]
+disabled = false
+ssh_only = false
+format = "$hostname:"
+
+[directory]
+disabled = false
+truncation_length = 1
+truncation_symbol = ""
+truncate_to_repo = false
+format = "$path "
+
+[git_branch]
+disabled = false
+symbol = "⎇ "   # U+2387
+format = "[$symbol$branch]($style)"
+style = "purple"
+
+[git_commit]
+disabled = false
+style = "purple"
+only_detached = false
+tag_disabled = false
+tag_symbol = ""
+
+[git_state]
+disabled = false
+style = "yellow"
+
+[git_status]
+disabled = false
+style = "red"
+
+[aws]
+format = "[$symbol$profile]($style) "
+style = "ffa500"
+symbol = "☁"   # U+2601
+
+[kubernetes]
+disabled = false
+format = "[$symbol$context]($style) "
+symbol = "⎈"   # U+2388
+style = "cyan"
+
+[status]
+disabled = false
+
+[rust]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "🦀"   # U+1F980
+style = "dimmed red"
+
+[conda]
+disabled = false
+style = "green"
+symbol = "ᛡ"   # U+16E1 (Ior: World Serpent)
+format = "[$symbol$environment]($style) "
+ignore_base = false
+
