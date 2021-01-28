@@ -41,8 +41,8 @@ if &loadplugins
 
 		if has('nvim')
 			packadd! nvim-lsp
-			lua require'nvim_lsp'.pyls.setup{}
-			lua require'nvim_lsp'.rust_analyzer.setup({})
+			lua require'lspconfig'.pyls.setup{}
+			lua require'lspconfig'.rust_analyzer.setup({})
 		endif
 
 		let g:signify_sign_show_count        = 0
