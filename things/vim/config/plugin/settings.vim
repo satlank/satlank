@@ -191,3 +191,5 @@ if executable('rg')  " Use a fast grep
 	set grepprg=rg\ --color=never\ --vimgrep
 	set grepformat=%f:%l:%c:%m
 endif
+
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'rust']
