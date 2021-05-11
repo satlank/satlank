@@ -63,4 +63,4 @@ so ${XDG_CONFIG_HOME}/bash/funcs.bash
 #so ${XDG_CONFIG_HOME}/bash/prompt.bash
 so ${XDG_CONFIG_HOME}/bash/alias.bash
 
-eval "$(starship init bash)"
+eval "$(${HOME}/bin/starship init bash)"
