@@ -34,6 +34,7 @@ if [ x$(uname) == 'xDarwin' ]; then
 else
     alias du1='du --max-depth=1 -h'
 fi
+alias ts='date -u +"%Y%m%d%H%M%S"'
 alias lesss='less -S'
 alias py='ipython'
 alias m='mutt -n'
