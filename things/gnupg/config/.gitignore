@@ -9,3 +9,4 @@ random_seed
 reader_0.status
 sshcontrol
 trustdb.gpg
+crls.d/
