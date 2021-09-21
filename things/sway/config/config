@@ -19,14 +19,14 @@ set $term /home/srk/bin/alacritty
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 5
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output DP-2 bg /home/srk/Pictures/653552.jpg fill
 output DP-1 bg /home/srk/Pictures/928753.jpg fill
+output DP-2 bg /home/srk/Pictures/653552.jpg fill
 
 #
 # Example configuration:
@@ -42,11 +42,11 @@ output DP-2 resolution 3840x2160 pos 3840 0
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -100,6 +100,8 @@ input "1241:17733:USB_Keyboard" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    bindsym $mod+Ctrl+l exec swaylock -f -c 000000
 #
 # Moving around:
 #
@@ -222,11 +224,15 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    status_command while date +'%a %d %b %H:%M:%S'; do sleep 1; done
+
+    font "IBM Plex Mono"
+
+    output DP-1
 
     colors {
-        statusline #ffffff
-        background #323232
+        statusline #ffffffcc
+        background #323232cc
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
