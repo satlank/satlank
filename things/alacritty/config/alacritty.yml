@@ -17,7 +17,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  background_opacity: 0.9
+  opacity: 0.88
 
   # Window dimensions (changes require restart)
   #
@@ -178,7 +178,7 @@ font:
 
 # Colors (Tomorrow Night Bright)
 colors:
-  opaque_background_colors: false
+  transparent_background_colors: true
   # Default colors
   #primary:
   #  background: '#000000'
