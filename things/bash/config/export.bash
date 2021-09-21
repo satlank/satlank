@@ -42,6 +42,7 @@ export GOPATH=$HOME/Code/go
 # Deal with rust/cargo
 export CARGO_HOME=${XDG_CACHE_HOME}/cargo
 export RUSTUP_HOME=${XDG_CACHE_HOME}/rustup
+export RUSTFLAGS="-C target-cpu=native"
 
 # Deal with (ana)conda
 if [ -d /opt/miniconda3 ]; then
