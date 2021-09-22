@@ -45,7 +45,7 @@ disabled = false
 style = "purple"
 only_detached = false
 tag_disabled = false
-tag_symbol = ""
+tag_symbol = " "
 
 [git_state]
 disabled = false
