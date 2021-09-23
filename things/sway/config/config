@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term /home/srk/bin/alacritty
+set $term $HOME/bin/alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
@@ -228,9 +228,10 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%a %d %b %H:%M:%S'; do sleep 1; done
+    #status_command while date +'%a %d %b %H:%M:%S'; do sleep 1; done
+    status_command $HOME/bin/i3status-rs $HOME/.config/i3status-rust/config.toml
 
-    font "IBM Plex Mono"
+    font "IBM Plex Sans"
 
     output DP-1
 

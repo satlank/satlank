@@ -1,0 +1,54 @@
+theme = "native"
+icons = "awesome5"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+
+[[block]]
+block = "net"
+device = "eno1"
+format = "{speed_down;K*B} {speed_up;K*B}"
+interval = 1
+
+[[block]]
+block = "net"
+device = "enp7s0"
+format = "{speed_down;K*B} {speed_up;K*B}"
+interval = 1
+
+[[block]]
+block = "cpu"
+interval = 1
+format = "{barchart} {utilization} {frequency}"
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 5
+format = "CPU {max}"
+chip = "k10temp-pci-*"
+inputs = ['Tdie']
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 5
+format = "GPU {max}"
+chip = "amdgpu-pci-*"
+inputs = ['edge']
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 5
+format = "NVMe {max}"
+chip = "nvme-pci-*"
+inputs = ['Composite']
+
+[[block]]
+block = "time"
+interval = 1
+format = "%a %d %b %H:%M:%S"
