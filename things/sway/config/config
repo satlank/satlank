@@ -19,8 +19,12 @@ set $term /home/srk/bin/alacritty
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-gaps inner 5
-gaps outer 5
+gaps outer 0
+gaps inner 4
+gaps top -5
+gaps right -5
+gaps left -5
+gaps bottom -5
 
 ### Output configuration
 #
