@@ -29,8 +29,12 @@ gaps bottom -5
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output DP-1 bg /home/srk/Pictures/928753.jpg fill
-output DP-2 bg /home/srk/Pictures/653552.jpg fill
+#output DP-1 bg $HOME/srk/assets/desktop-backgrounds/4K/LakeAndMountains-0.jpg fill
+#output DP-2 bg $HOME/srk/assets/desktop-backgrounds/4K/LakeAndMountains-1.jpg fill
+output DP-1 bg $HOME/srk/assets/desktop-backgrounds/4K/apollo16-0.png fill
+output DP-2 bg $HOME/srk/assets/desktop-backgrounds/4K/apollo16-1.png fill
+#output DP-1 bg $HOME/srk/assets/desktop-backgrounds/4K/solarsystem-0.jpg fill
+#output DP-2 bg $HOME/srk/assets/desktop-backgrounds/4K/solarsystem-1.jpg fill
 
 #
 # Example configuration:
