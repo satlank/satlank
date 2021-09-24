@@ -2,3 +2,4 @@ id_rsa*
 *pub
 *id
 known_hosts
+config.local

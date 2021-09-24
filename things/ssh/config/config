@@ -1,4 +1,4 @@
-UseKeychain yes
+Include config.local
 
 Host github.com
 	IdentitiesOnly yes
