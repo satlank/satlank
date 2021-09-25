@@ -1,6 +1,6 @@
 # Configurations
 
-This is collection of my dotfiles as they have accumulated and evolved over the decades.  A lot of the actual configurations are inspired from reading other people's configurations, partly in settings, partly in structuring.
+This is the collection of my dotfiles as they have accumulated and evolved over the decades.  A lot of the actual configurations are inspired from reading other people's configurations, partly in settings, partly in structuring.
 
 I am generally trying to put all configurations into the `XDG_*` directories (that mostly means `~/.config/`), which occasionally means an extra layer of symlinks.
 
