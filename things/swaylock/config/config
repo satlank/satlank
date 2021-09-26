@@ -1,0 +1,13 @@
+font=IBM Plex Sans
+font-size=26
+
+indicator-radius=100
+indicator-thickness=40
+
+show-keyboard-layout
+show-failed-attempts
+ignore-empty-password
+
+scaling=fill
+image=DP-1:$HOME/srk/assets/desktop-backgrounds/4K/solarsystem-0.jpg
+image=DP-2:$HOME/srk/assets/desktop-backgrounds/4K/solarsystem-1.jpg
