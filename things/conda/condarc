@@ -1,5 +1,5 @@
 # vim: set ft=yaml:
-channel_priority: strict
+channel_priority: flexible
 ssl_verify: true
 channels:
   - defaults
