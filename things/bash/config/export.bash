@@ -45,7 +45,10 @@ export RUSTUP_HOME=${XDG_CACHE_HOME}/rustup
 export RUSTFLAGS="-C target-cpu=native"
 
 # Deal with (ana)conda
-if [ -d /opt/miniconda3 ]; then
+if [ -d $HOME/opt/miniconda3 ]; then
+	# The new location for miniconda3 everywhere (ideally)
+	export ANACONDA_PATH=$HOME/opt/miniconda3/bin
+elif [ -d /opt/miniconda3 ]; then
 	# Location of anaconda on OSX (manual install)
 	export ANACONDA_PATH=/opt/miniconda3/bin
 elif [ -d /opt/anaconda ]; then
