@@ -96,6 +96,9 @@ input "1241:17733:USB_Keyboard" {
     # Start your launcher
     bindsym $mod+space exec $menu
 
+    # Power menu
+    bindsym $mod+p exec ~/.config/wofi/power.sh
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
