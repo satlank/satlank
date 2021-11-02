@@ -35,7 +35,6 @@ if &loadplugins
 	if has('packages')
 		packadd! base16-vim
 
-		packadd! deoplete-lsp
 		packadd! rust.vim
 		packadd! dart-vim-plugin
 		packadd! vim-terraform
