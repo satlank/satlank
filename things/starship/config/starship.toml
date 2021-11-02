@@ -57,8 +57,8 @@ style = "red"
 
 [aws]
 format = "[$symbol$profile]($style) "
-style = "ffa500"
-symbol = "☁"   # U+2601
+style = "#ffa500"
+symbol = "☁ "   # U+2601
 
 [kubernetes]
 disabled = false
