@@ -22,3 +22,6 @@
 [submodule "things/vim/config/pack/external/opt/dart-vim-plugin"]
 	path = things/vim/config/pack/external/opt/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin
+[submodule "things/vim/config/pack/external/opt/vim-terraform"]
+	path = things/vim/config/pack/external/opt/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git

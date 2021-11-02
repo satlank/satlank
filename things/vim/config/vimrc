@@ -38,6 +38,7 @@ if &loadplugins
 		packadd! deoplete-lsp
 		packadd! rust.vim
 		packadd! dart-vim-plugin
+		packadd! vim-terraform
 
 		if has('nvim')
 			packadd! nvim-lsp
