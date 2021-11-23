@@ -13,9 +13,6 @@
 [submodule "things/vim/config/pack/external/opt/deoplete-lsp"]
 	path = things/vim/config/pack/external/opt/deoplete-lsp
 	url = https://github.com/Shougo/deoplete-lsp.git
-[submodule "things/vim/config/pack/external/opt/nvim-lsp"]
-	path = things/vim/config/pack/external/opt/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp.git
 [submodule "things/vim/config/pack/external/opt/deoplete.nvim"]
 	path = things/vim/config/pack/external/opt/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
@@ -25,3 +22,6 @@
 [submodule "things/vim/config/pack/external/opt/vim-terraform"]
 	path = things/vim/config/pack/external/opt/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "things/vim/config/pack/external/opt/nvim-lspconfig"]
+	path = things/vim/config/pack/external/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git

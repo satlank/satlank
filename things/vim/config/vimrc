@@ -40,8 +40,8 @@ if &loadplugins
 		packadd! vim-terraform
 
 		if has('nvim')
-			packadd! nvim-lsp
-			lua require'lspconfig'.pyls.setup{}
+			packadd! nvim-lspconfig
+			lua require'lspconfig'.pylsp.setup{}
 			lua require'lspconfig'.rust_analyzer.setup({})
 		endif
 

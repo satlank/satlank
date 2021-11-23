@@ -6,6 +6,15 @@ function! satlank#autocomplete#setup_mappings() abort
 
 	imap <expr> <buffer> <silent> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 	smap <expr> <buffer> <silent> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
+	nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+	nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+	nnoremap <silent> gi <cmd>lua vim.lsp.buf.definition()<CR>
+	nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+	nnoremap <silent> ge <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+	nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+	nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
+	nnoremap <silent> <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 endfunction
 
 function! satlank#autocomplete#expand_or_jump(direction) abort

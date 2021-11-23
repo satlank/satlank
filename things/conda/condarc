@@ -6,7 +6,11 @@ channels:
   - conda-forge
 create_default_packages:
   - pynvim
-  - python-language-server[all]
+  - python-lsp-server[all]
+  - pylsp-mypy
+  - pyls-isort
+  - python-lsp-black
+  - pyls-memestra
 
 auto_update_conda: false
 changeps1: false
