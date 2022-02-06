@@ -192,4 +192,4 @@ if executable('rg')  " Use a fast grep
 	set grepformat=%f:%l:%c:%m
 endif
 
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'rust']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'rust', 'yaml']
