@@ -10,7 +10,7 @@
 	gpgSign = true
 
 [core]
-	pager = delta --theme='base16'
+	pager = delta --syntax-theme='base16'
 
 [interactive]
 	diffFilter = delta --color-only
