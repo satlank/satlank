@@ -13,7 +13,7 @@ function! satlank#autocomplete#setup_mappings() abort
 	nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 	nnoremap <silent> ge <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 	nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-	nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
+	nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.format { async = true }<CR>
 	nnoremap <silent> <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
 endfunction
 
