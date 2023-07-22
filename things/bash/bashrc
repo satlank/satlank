@@ -10,6 +10,11 @@ function so {
 	[ -s $1 ] && source $1;
 }
 
+# Enable HomeBrew
+if [ -d /opt/homebrew/bin/ ]; then
+	export PATH="/opt/homebrew/bin:$PATH"
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
