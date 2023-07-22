@@ -25,3 +25,9 @@
 [submodule "things/vim/config/pack/external/opt/nvim-lspconfig"]
 	path = things/vim/config/pack/external/opt/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "things/vim/config/pack/external/opt/rust-tools.nvim"]
+	path = things/vim/config/pack/external/opt/rust-tools.nvim
+	url = https://github.com/simrat39/rust-tools.nvim.git
+[submodule "things/vim/config/pack/external/opt/copilot.vim"]
+	path = things/vim/config/pack/external/opt/copilot.vim
+	url = https://github.com/github/copilot.vim.git

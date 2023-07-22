@@ -1,8 +1,10 @@
 function! satlank#autocomplete#setup_mappings() abort
-	inoremap <buffer> <silent> <Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
-	snoremap <buffer> <silent> <Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
-	inoremap <buffer> <silent> <S-Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
-	snoremap <buffer> <silent> <S-Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
+	"" Disabling the below because it is causing issues with CoPilot completions
+	"" (can't accept the completion).
+	" inoremap <buffer> <silent> <Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
+	" snoremap <buffer> <silent> <Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
+	" inoremap <buffer> <silent> <S-Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
+	" snoremap <buffer> <silent> <S-Tab> <C-R>=satlank#autocomplete#expand_or_jump("N")<CR>
 
 	imap <expr> <buffer> <silent> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 	smap <expr> <buffer> <silent> <CR> pumvisible() ? "\<C-y>" : "\<CR>"

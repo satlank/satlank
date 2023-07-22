@@ -23,6 +23,13 @@ function s:CheckColorScheme()
 		set background=dark
 		colorscheme base16-synth-midnight-dark
 	endif
+	if has('nvim')
+		lua << EOF
+for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+	vim.api.nvim_set_hl(0, group, {})
+end
+EOF
+	endif
 endfunction
 
 if v:progname !=# 'vi'

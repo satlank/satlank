@@ -39,10 +39,31 @@ if &loadplugins
 		packadd! dart-vim-plugin
 		packadd! vim-terraform
 
+		packadd! copilot.vim
+
 		if has('nvim')
 			packadd! nvim-lspconfig
+			packadd! rust-tools.nvim
 			lua require'lspconfig'.pylsp.setup{}
-			lua require'lspconfig'.rust_analyzer.setup({})
+			lua << EOF
+local rt = require("rust-tools")
+
+rt.setup({
+	server = {
+		settings = {
+			["rust-analyzer"] = {
+				inlayHints = { locationLinks = false }
+			}
+		}
+	},
+	on_attach = function(_, bufnr)
+		-- Hover actions
+		vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+		-- Code action groups
+		vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+	end,
+})
+EOF
 		endif
 
 		let g:signify_sign_show_count        = 0
