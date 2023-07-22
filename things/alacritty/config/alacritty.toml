@@ -1,0 +1,44 @@
+live_config_reload = true
+
+[colors]
+transparent_background_colors = true
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "IBM Plex Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "IBM Plex Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "IBM Plex Mono"
+style = "Regular Italic"
+
+[font.normal]
+family = "IBM Plex Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Command"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "full"
+opacity = 0.88
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 84
+lines = 55
