@@ -43,9 +43,46 @@ if &loadplugins
 
 		if has('nvim')
 			packadd! nvim-lspconfig
-			packadd! rust-tools.nvim
 			lua require'lspconfig'.pylsp.setup{}
+			packadd! rust-tools.nvim
+			packadd! plenary.nvim
+			packadd! telescope.nvim
+			packadd! obsidian.nvim
 			lua << EOF
+local obsidian = require("obsidian")
+obsidian.setup({
+	workspaces = {
+		{
+			name = "vault",
+			path = "~/srk/notes/",
+		},
+	},
+	daily_notes = {
+		folder = "daily/",
+		-- Match Obsidian date format of, e.g. "2021-08-01_Sun"
+		date_format = "%Y-%m-%d_%a",
+		template = "assets/templates/daily.md",
+	},
+	templates = {
+		subdir = "assets/templates/",
+	},
+	picker = {
+		name = "telescope.nvim",
+	},
+	ui = {
+		enable = false,
+	},
+	disable_frontmatter = true,
+	note_id_func = function(title)
+		-- Match the ZK Obsidian plugin's note ID format of, e.g. "20210801123456"
+		local prefix = os.date("%Y%m%d%H%M%S")
+		if title ~= nil and title ~= "" then
+			return prefix .. " " .. title
+		else
+			return prefix
+		end
+	end,
+})
 local rt = require("rust-tools")
 
 rt.setup({

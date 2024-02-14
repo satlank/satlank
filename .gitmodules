@@ -31,3 +31,12 @@
 [submodule "things/vim/config/pack/external/opt/copilot.vim"]
 	path = things/vim/config/pack/external/opt/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "things/vim/config/pack/external/opt/obsidian.nvim"]
+	path = things/vim/config/pack/external/opt/obsidian.nvim
+	url = https://github.com/epwalsh/obsidian.nvim.git
+[submodule "things/vim/config/pack/external/opt/plenary.nvim"]
+	path = things/vim/config/pack/external/opt/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "things/vim/config/pack/external/opt/telescope.nvim"]
+	path = things/vim/config/pack/external/opt/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
