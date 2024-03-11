@@ -37,7 +37,7 @@ fi
 alias ts='date -u +"%Y%m%d%H%M%S"'
 alias lesss='less -S'
 alias py='ipython'
-alias m='mutt -n'
+alias m='neomutt -n'
 alias sa='source ${ANACONDA_PATH}/activate'
 alias sd='conda deactivate'
 alias senv='env | sort'
