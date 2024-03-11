@@ -105,7 +105,7 @@ obsidian.setup({
 		folder = "daily/",
 		-- Match Obsidian date format of, e.g. "2021-08-01_Sun"
 		date_format = "%Y-%m-%d_%a",
-		template = "assets/templates/daily.md",
+		template = "daily.md",
 	},
 	completion = {
 		nvim_cmp = true,
