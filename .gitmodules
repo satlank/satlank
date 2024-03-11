@@ -40,3 +40,18 @@
 [submodule "things/vim/config/pack/external/opt/telescope.nvim"]
 	path = things/vim/config/pack/external/opt/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "things/vim/config/pack/external/opt/nvim-cmp"]
+	path = things/vim/config/pack/external/opt/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "things/vim/config/pack/external/opt/cmp-nvim-lsp"]
+	path = things/vim/config/pack/external/opt/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
+[submodule "things/vim/config/pack/external/opt/cmp-vsnip"]
+	path = things/vim/config/pack/external/opt/cmp-vsnip
+	url = https://github.com/hrsh7th/cmp-vsnip.git
+[submodule "things/vim/config/pack/external/opt/vim-vsnip"]
+	path = things/vim/config/pack/external/opt/vim-vsnip
+	url = https://github.com/hrsh7th/vim-vsnip.git
+[submodule "things/vim/config/pack/external/opt/true-zen.nvim"]
+	path = things/vim/config/pack/external/opt/true-zen.nvim
+	url = https://github.com/Pocco81/true-zen.nvim

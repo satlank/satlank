@@ -43,12 +43,56 @@ if &loadplugins
 
 		if has('nvim')
 			packadd! nvim-lspconfig
-			lua require'lspconfig'.pylsp.setup{}
+			packadd! cmp-nvim-lsp
+			packadd! nvim-cmp
 			packadd! rust-tools.nvim
 			packadd! plenary.nvim
 			packadd! telescope.nvim
 			packadd! obsidian.nvim
+			packadd! true-zen.nvim
 			lua << EOF
+local truezen = require("true-zen")
+truezen.setup({
+	modes = {
+		ataraxis = {
+			padding = { left = 100, right = 100, top = 0, bottom = 0 },
+			minimum_writing_area = { height = 25, width = 80 },
+		},
+	},
+})
+
+local cmp = require("cmp")
+cmp.setup({
+	snippet = {
+		expand = function(args)
+			vim.fn["vsnip#anonymous"](args.body)
+		end,
+	},
+	window = {
+	},
+	mapping = cmp.mapping.preset.insert({
+		["<C-b>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-e>"] = cmp.mapping.abort(),
+		["<CR>"] = cmp.mapping.confirm({
+			select = true,
+		}),
+	
+	}),
+	sources = {
+		{ name = "nvim_lsp" },
+		{ name = "vsnip" },
+	},
+})
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+require'lspconfig'.pylsp.setup{
+	capabilities = capabilities,
+}
+
+
 local obsidian = require("obsidian")
 obsidian.setup({
 	workspaces = {
@@ -62,6 +106,10 @@ obsidian.setup({
 		-- Match Obsidian date format of, e.g. "2021-08-01_Sun"
 		date_format = "%Y-%m-%d_%a",
 		template = "assets/templates/daily.md",
+	},
+	completion = {
+		nvim_cmp = true,
+		min_chars = 2,
 	},
 	templates = {
 		subdir = "assets/templates/",
