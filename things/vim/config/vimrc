@@ -113,6 +113,8 @@ obsidian.setup({
 	},
 	templates = {
 		subdir = "assets/templates/",
+		date_format = "%Y-%m-%d",
+		time_format = "%H:%M:%S",
 	},
 	picker = {
 		name = "telescope.nvim",
