@@ -22,6 +22,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 elif [ -f /usr/local/etc/bash_completion ] && ! shopt -oq posix; then
 	. /usr/local/etc/bash_completion
+elif [ -f /opt/homebrew/etc/profile.d/bash_completion.sh ]; then
+	. /opt/homebrew/etc/profile.d/bash_completion.sh
 else
 	if [ -f /usr/share/git/completion/git-prompt.sh ]; then
 		. /usr/share/git/completion/git-prompt.sh
