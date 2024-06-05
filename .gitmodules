@@ -46,6 +46,6 @@
 [submodule "things/vim/config/pack/external/opt/vim-vsnip"]
 	path = things/vim/config/pack/external/opt/vim-vsnip
 	url = https://github.com/hrsh7th/vim-vsnip.git
-[submodule "things/vim/config/pack/external/opt/true-zen.nvim"]
-	path = things/vim/config/pack/external/opt/true-zen.nvim
-	url = https://github.com/Pocco81/true-zen.nvim
+[submodule "things/vim/config/pack/external/opt/zen-mode.nvim"]
+	path = things/vim/config/pack/external/opt/zen-mode.nvim
+	url = https://github.com/folke/zen-mode.nvim.git

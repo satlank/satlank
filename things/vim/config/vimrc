@@ -49,15 +49,37 @@ if &loadplugins
 			packadd! plenary.nvim
 			packadd! telescope.nvim
 			packadd! obsidian.nvim
-			packadd! true-zen.nvim
+			packadd! zen-mode.nvim
 			lua << EOF
-local truezen = require("true-zen")
-truezen.setup({
-	modes = {
-		ataraxis = {
-			padding = { left = 100, right = 100, top = 0, bottom = 0 },
-			minimum_writing_area = { height = 25, width = 80 },
+local zen = require("zen-mode")
+zen.setup({
+	window = {
+		backdrop = 1,
+		width = 80,
+		height = 0.95,
+		options = {
+			number = false,
+			relativenumber = false,
+			cursorline = false,
+			cursorcolumn = false,
+			signcolumn = "no",
+			list = true,
+			foldcolumn = "0",
 		},
+	},
+	plugins = {
+		options = {
+			enabled = true,
+			ruler = false,
+			showcmd = false,
+			laststatus = 0,
+		},
+		gitsigns = { enabled = false },
+		tmux = { enabled = true },
+		twilight = { enabled = false },
+		alacrity = { enabled = false },
+		kitty = { enabled = false },
+		wezterm = { enabled = false },
 	},
 })
 
