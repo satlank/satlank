@@ -1,4 +1,3 @@
-live_config_reload = true
 
 [colors]
 transparent_background_colors = true
@@ -35,10 +34,13 @@ history = 10000
 multiplier = 3
 
 [window]
-decorations = "full"
-opacity = 0.88
+decorations = "Full"
+opacity = 0.79
 startup_mode = "Windowed"
 
 [window.dimensions]
 columns = 84
 lines = 55
+
+[general]
+live_config_reload = true
