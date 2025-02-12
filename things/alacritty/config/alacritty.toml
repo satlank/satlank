@@ -35,7 +35,7 @@ multiplier = 3
 
 [window]
 decorations = "Full"
-opacity = 0.79
+opacity = 0.89
 startup_mode = "Windowed"
 
 [window.dimensions]
