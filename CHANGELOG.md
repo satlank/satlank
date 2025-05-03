@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.1] - 2025-05-03
+
+### 🚀 Features
+
+- 2025-05-03 *(vim)* Update plugins, replace rust-tools with rustaceanvim
+- 2025-02-12 *(alacritty)* Adjust opacity for new background
+- 2025-02-12 *(vim)* Update plugins
+- 2024-10-04 *(alacritty)* Update config to latest master
+
+### 📚 Documentation
+
+- 2024-10-04 Adding changelog
+
 ## [0.8.0] - 2024-09-29
 
 ### 🚀 Features
