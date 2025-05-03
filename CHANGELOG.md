@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.2] - 2025-05-03
+
+### 🚀 Features
+
+- 2025-05-03 *(base16-shell)* Update submodule
+
 ## [0.8.1] - 2025-05-03
 
 ### 🚀 Features
