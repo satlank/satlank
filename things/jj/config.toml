@@ -1,0 +1,20 @@
+[user]
+name = "Steffen R. Knollmann"
+email = "srk@k7n.dev"
+
+[aliases]
+stat = ["status"]
+ll = ["log", "-r", "all()", "-T", "builtin_log_detailed"]
+dlast = ["diff", "-r", "@-"]
+llast = ["log", "-r", "@-", "-s"]
+
+[signing]
+behavior = "drop"
+backend = "gpg"
+key = "0xAE12D7DABF364872"
+
+[git]
+sign-on-push = true
+
+[ui]
+default-command = "log"
