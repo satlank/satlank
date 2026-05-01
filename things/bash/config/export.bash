@@ -65,6 +65,9 @@ if [ -d /usr/local/opt/openssl/bin ]; then
 	# openssl installation from homebrew
 	export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
+if [ -d ~/.lmstudio/bin ]; then
+	export PATH=~/.lmstudio/bin:$PATH
+fi
 if [ -d ${CARGO_HOME}/bin ]; then
 	export PATH="$CARGO_HOME/bin:$PATH"
 fi
