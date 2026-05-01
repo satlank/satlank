@@ -11,3 +11,4 @@ sshcontrol
 trustdb.gpg
 tofu.db
 crls.d/
+.#lk0*
