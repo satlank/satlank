@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.3] - 2026-05-01
+
+### 🚀 Features
+
+- 2026-05-01 *(jj)* Ignore local state
+- 2026-05-01 *(nv3)* Add spelling dictionary and ignore compiled version
+- 2026-05-01 *(git)* Set source of credentials for local forgejo
+- 2026-05-01 *(bash)* Set path to lmstudio bin if available
+- 2026-05-01 *(gnupg)* More git ignores
+- 2026-05-01 *(git)* Add a global ignore
+- 2026-05-01 *(jj)* Basic jj config
+- 2026-05-01 *(nv3)* Modern neovim config with `nv3` alias
+- 2026-05-01 *(tmux)* Minor modernisation
+
 ## [0.8.2] - 2025-05-03
 
 ### 🚀 Features
