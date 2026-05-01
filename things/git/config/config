@@ -32,3 +32,6 @@
 	rebase = true
 [init]
 	defaultBranch = master
+
+[credential "https://forgejo.triceratops-alpha.ts.net/"]
+	helper = store
