@@ -42,3 +42,9 @@ alias sa='source ${ANACONDA_PATH}/activate'
 alias sd='conda deactivate'
 alias senv='env | sort'
 alias k='kubectl'
+
+alias nv3='NVIM_APPNAME=nv3 nvim'
+alias nvc='NVIM_APPNAME=nv3 nvim ~/.config/nv3/init.lua'
+
+alias cr="tuicr --no-update-check"
+
