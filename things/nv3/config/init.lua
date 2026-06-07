@@ -426,8 +426,8 @@ require("lazy").setup({
       },
       frontmatter = { enabled = false },
       note_id_func = function(title)
-        -- Match the ZK Obsidian plugin's note ID format of, e.g. "20210801123456"
-        local prefix = os.date("%Y%m%d%H%M%S")
+        -- ID format: YYYY.MMDD.HHMM.SS, e.g. "2026.0607.1234.56"
+        local prefix = os.date("%Y.%m%d.%H%M.%S")
         if title ~= nil and title ~= "" then
           return prefix .. " " .. title
         else
