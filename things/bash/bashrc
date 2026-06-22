@@ -40,11 +40,34 @@ fi
 if [ -z ${XDG_CONFIG_HOME+x} ]; then
 	export XDG_CONFIG_HOME=$HOME/.config
 fi
+if [ -e "$XDG_CONFIG_HOME" ] && [ ! -d "$XDG_CONFIG_HOME" ]; then
+	echo "WARNING: XDG_CONFIG_HOME ($XDG_CONFIG_HOME) exists but is not a directory" >&2
+elif [ ! -e "$XDG_CONFIG_HOME" ]; then
+	mkdir -p "$XDG_CONFIG_HOME"
+fi
 if [ -z ${XDG_CACHE_HOME+x} ]; then
 	export XDG_CACHE_HOME=$HOME/.cache
 fi
+if [ -e "$XDG_CACHE_HOME" ] && [ ! -d "$XDG_CACHE_HOME" ]; then
+	echo "WARNING: XDG_CACHE_HOME ($XDG_CACHE_HOME) exists but is not a directory" >&2
+elif [ ! -e "$XDG_CACHE_HOME" ]; then
+	mkdir -p "$XDG_CACHE_HOME"
+fi
 if [ -z ${XDG_DATA_HOME+x} ]; then
 	export XDG_DATA_HOME=$HOME/.local/share
+fi
+if [ -e "$XDG_DATA_HOME" ] && [ ! -d "$XDG_DATA_HOME" ]; then
+	echo "WARNING: XDG_DATA_HOME ($XDG_DATA_HOME) exists but is not a directory" >&2
+elif [ ! -e "$XDG_DATA_HOME" ]; then
+	mkdir -p "$XDG_DATA_HOME"
+fi
+if [ -z ${XDG_STATE_HOME+x} ]; then
+	export XDG_STATE_HOME=$HOME/.local/state
+fi
+if [ -e "$XDG_STATE_HOME" ] && [ ! -d "$XDG_STATE_HOME" ]; then
+	echo "WARNING: XDG_STATE_HOME ($XDG_STATE_HOME) exists but is not a directory" >&2
+elif [ ! -e "$XDG_STATE_HOME" ]; then
+	mkdir -p "$XDG_STATE_HOME"
 fi
 if [ -z ${XDG_RUNTIME_DIR+x} ]; then
 	if [ x$(uname) == 'xDarwin' ]; then
@@ -56,6 +79,9 @@ if [ -z ${XDG_RUNTIME_DIR+x} ]; then
 		#       setting a suitable value.
 		:
 	fi
+fi
+if [ -e "$XDG_RUNTIME_DIR" ] && [ ! -d "$XDG_RUNTIME_DIR" ]; then
+	echo "WARNING: XDG_RUNTIME_DIR ($XDG_RUNTIME_DIR) exists but is not a directory" >&2
 fi
 
 so ${XDG_CONFIG_HOME}/bash/export.bash
