@@ -408,8 +408,8 @@ require("lazy").setup({
         workdays_only = false,
       },
       completion = {
-        blink = true,
-        nvim_cmp = false,
+        -- blink = true,
+        -- nvim_cmp = false,
         min_chars = 2,
       },
       new_notes_location = "current_dir",
@@ -438,7 +438,7 @@ require("lazy").setup({
         enter_note = function(_, note)
           vim.keymap.set("n", "gf", function()
             if require("obsidian").util.cursor_link() then
-              return "<cmd>Obsidian follow_link<cr>"
+              return "m'<cmd>Obsidian follow_link<cr>"
             else
               return "gf"
             end
