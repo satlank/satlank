@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.4] - 2026-09-21
+
+### 🚀 Features
+
+- 2026-09-21 *(nv3)* Package updates
+- 2026-06-22 *(bash)* Ensure XDG dirs exist and are dirs
+- 2026-06-07 *(nv3)* Update obsidian.nvim note ID format to YYYY.MMDD.HHMM.SS
+
 ## [0.8.3] - 2026-05-01
 
 ### 🚀 Features
