@@ -28,6 +28,7 @@ alias l='ls -CF'
 alias llh='ls -lh'
 alias lh='ls -h'
 alias vi='nv3'
+alias vim='nv3'
 alias lla='ll -a'
 if [ x$(uname) == 'xDarwin' ]; then
     alias du1='du -d 1 -h'
