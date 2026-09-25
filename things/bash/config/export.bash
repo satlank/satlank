@@ -13,8 +13,10 @@ export CLICOLOR=1
 # https://unix.stackexchange.com/questions/4859/visual-vs-editor-whats-the-difference
 # I don't care about non-'advanced' terminals, so setting them to the
 # same works for me (though VISUAL should be enough) and 'does the right
-# thing' if something only looks at EDITOR.
-export EDITOR=nvim
+# thing' if something only looks at EDITOR.  Points at the nv3 wrapper
+# script by absolute path, as programs can't see aliases and might not
+# have the same PATH.
+export EDITOR="${XDG_CONFIG_HOME}/bash/bin/nv3"
 export VISUAL=$EDITOR
 
 # History Settings
@@ -70,6 +72,9 @@ if [ -d ~/.lmstudio/bin ]; then
 fi
 if [ -d ${CARGO_HOME}/bin ]; then
 	export PATH="$CARGO_HOME/bin:$PATH"
+fi
+if [ -d ${XDG_CONFIG_HOME}/bash/bin ]; then
+	export PATH="${XDG_CONFIG_HOME}/bash/bin:$PATH"
 fi
 if [ -d ~/bin ]; then
 	export PATH=~/bin:$PATH

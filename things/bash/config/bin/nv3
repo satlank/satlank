@@ -1,0 +1,5 @@
+#!/bin/sh
+# Launch Neovim with the nv3 config.  This is a script rather than an alias
+# so that it also works as EDITOR/VISUAL for programs that don't go through
+# the shell.
+NVIM_APPNAME=nv3 exec nvim "$@"
