@@ -239,6 +239,7 @@ function plain.init(bufnr)               -- bufnr may be nil → current buffer
   local opt = vim.bo[bufnr]            -- buffer‑local options shortcut
   opt.textwidth   = 0                  -- setlocal textwidth=0
   opt.wrapmargin  = 0                  -- setlocal wrapmargin=0
+  opt.synmaxcol   = 0                  -- highlight long paragraphs fully
 
   if vim.fn.has('conceal') == 1 then
     vim.opt_local.concealcursor = "nc"           -- setlocal concealcursor=nc
@@ -284,6 +285,24 @@ autocmd('FileType', {
   callback = function(ev)
     plain.init(ev.buf)
     spell.enable(ev.buf)
+  end,
+})
+
+-- Filetype tweaks ------------------------------------------------------
+augroup('FiletypeSetup', { clear = true })
+autocmd('FileType', {
+  group   = 'FiletypeSetup',
+  pattern = 'gitcommit',
+  callback = function(ev)
+    vim.opt_local.foldenable = false
+    spell.enable(ev.buf)
+  end,
+})
+autocmd('FileType', {
+  group   = 'FiletypeSetup',
+  pattern = 'python',
+  callback = function(ev)
+    vim.bo[ev.buf].textwidth = 120
   end,
 })
 
