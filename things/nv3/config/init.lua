@@ -320,8 +320,7 @@ autocmd({'BufReadPost', 'BufNewFile'}, {
 ----------------------------------------------------------------------
 require("lazy").setup({
   {
-    'chriskempson/base16-vim',
-    version = '*',
+    'tinted-theming/tinted-vim',
     lazy = false,
     priority = 1000,
     config = function()
@@ -487,8 +486,20 @@ require("lazy").setup({
   },
   {
     'mrcjkb/rustaceanvim',
-    version = "^6",
+    version = "^9",
     lazy = false,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter').install { 'rust', 'markdown', 'markdown_inline', 'latex' }
+    end,
+  },
+  {
+    'brianhuster/live-preview.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim' },
   },
 })
 
