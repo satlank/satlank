@@ -9,7 +9,6 @@ $git_state\
 $git_status\
 $kubernetes\
 $rust\
-$conda\
 $aws\
 $cmd_duration\
 $status\
@@ -74,11 +73,4 @@ disabled = false
 format = "[$symbol$version]($style) "
 symbol = "🦀"   # U+1F980
 style = "dimmed red"
-
-[conda]
-disabled = false
-style = "green"
-symbol = "ᛡ"   # U+16E1 (Ior: World Serpent)
-format = "[$symbol$environment]($style) "
-ignore_base = false
 
