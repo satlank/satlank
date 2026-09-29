@@ -3,12 +3,10 @@ add_newline = false
 format = """# $username\
 $hostname\
 $directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_status\
+$vcs\
 $kubernetes\
 $rust\
+$python\
 $aws\
 $cmd_duration\
 $status\
@@ -33,6 +31,12 @@ truncation_symbol = ""
 truncate_to_repo = false
 format = "$path "
 
+[vcs]
+# jj first, so repos that use both jj and git show jj info
+order = ["jj", "git"]
+git_modules = "$git_branch$git_commit$git_state$git_status"
+jj_modules = "$jj_bookmark$jj_change$jj_status"
+
 [git_branch]
 disabled = false
 symbol = "⎇ "   # U+2387
@@ -54,6 +58,17 @@ style = "yellow"
 disabled = false
 style = "red"
 
+[jj_bookmark]
+symbol = "⎇ "   # U+2387, same as git_branch
+format = "[$symbol$bookmark(@$remote)$diverged]($style) "
+style = "purple"
+
+[jj_change]
+format = "$change "
+
+[jj_status]
+style = "red"
+
 [aws]
 format = "[$symbol$profile]($style) "
 style = "#ffa500"
@@ -73,4 +88,11 @@ disabled = false
 format = "[$symbol$version]($style) "
 symbol = "🦀"   # U+1F980
 style = "dimmed red"
+
+[python]
+style = "yellow"
+symbol = "🐍 "
+format = "[$symbol($version )(\\($virtualenv\\) )]($style)"
+# uv names every project venv `.venv`; show the project directory instead
+generic_venv_names = [".venv"]
 
