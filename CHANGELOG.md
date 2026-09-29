@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] - 2026-09-29
+
+### 🚀 Features
+
+- 2026-09-29 *(starship)* Add jj and python (uv) modules
+- 2026-09-29 [**breaking**] Purge conda
+- 2026-09-25 *(vim)* [**breaking**] Remove old vim/nvim config
+- 2026-09-25 *(bash)* Alias vim to nv3
+- 2026-09-25 *(nv3)* Document symlinks, including nvim using the nv3 config
+- 2026-09-25 *(nv3)* Carry over spelling words and filetype settings from old config
+- 2026-09-25 *(bash)* Use nv3 as EDITOR/VISUAL and for vi
+- 2026-09-25 *(nv3)* Update rustaceanvim, add treesitter parsers and live-preview
+
+### ⚙️ Miscellaneous Tasks
+
+- 2026-09-29 *(bash)* Remove unused prompt configuration
+
 ## [0.8.4] - 2026-09-21
 
 ### 🚀 Features
